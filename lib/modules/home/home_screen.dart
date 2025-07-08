@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             width: Get.width,
             color: AppColors.kPrimaryColor,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 40.h),
+              padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 50.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(width: 10.w),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Good Morning",
@@ -44,8 +45,17 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
+                      Spacer(),
+                      Icon(Icons.notifications,
+                          color: AppColors.kWhiteColor, size: 30)
                     ],
                   ),
+                  SizedBox(height: 20.h),
+                  Text(
+                    "Securely Book \nyour Flight Ticket",
+                    style: AppTypography.kExtraBold30
+                        .copyWith(color: AppColors.kWhiteColor),
+                  )
                 ],
               ),
             ),
